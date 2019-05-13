@@ -1,17 +1,22 @@
 <h2>My heroes</h2>
 <ul class="heroes">
-  <li *ngFor="let hero of heroes">
+  <li *ngFor="let hero of heroes"
+      [class.selected]="hero === selectedHero"
+      (click)="onSelect(hero)">
     <span class="badge">{{hero.id}}</span> {{hero.name}}
   </li>
 </ul>
-<!--
-The *ngFor is Angular's repeater directive. It repeats the host element for each element in a list.
 
-In this example
+<div *ngIf="selectedHero">
 
-    <li> is the host element
-    heroes is the list from the HeroesComponent class.
-    hero holds the current hero object for each iteration through the list.
 
-Don't forget the asterisk (*) in front of ngFor. It's a critical part of the syntax.
--->
+  <h2>{{selectedHero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedHero.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="selectedHero.name" placeholder="name"/>
+    </label>
+  </div>
+
+
+</div>
