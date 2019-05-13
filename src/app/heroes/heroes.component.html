@@ -1,11 +1,17 @@
-<h2>{{hero.name}} Details</h2>
-<div><span>id: </span>{{hero.id}}</div>
-<div>
-  <label> name:
-    <input [(ngModel)]="hero.name" placeholder="name"/>
-  </label>
-</div>
+<h2>My heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
 <!--
-[(ngModel)] is Angular's two-way data binding syntax.
-Here it binds the hero.name property to the HTML textbox so that data can flow in both directions: from the hero.name property to the textbox, and from the textbox back to the hero.name.
+The *ngFor is Angular's repeater directive. It repeats the host element for each element in a list.
+
+In this example
+
+    <li> is the host element
+    heroes is the list from the HeroesComponent class.
+    hero holds the current hero object for each iteration through the list.
+
+Don't forget the asterisk (*) in front of ngFor. It's a critical part of the syntax.
 -->
