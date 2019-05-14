@@ -5,11 +5,12 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {path: 'heroes', component: HeroesComponent},
-  { path: 'dashboard', component: DashboardComponent }
+  { path: 'dashboard', component: DashboardComponent },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)], //initialize the router and start it listening for browser location changes
+  imports: [RouterModule.forRoot(routes)], /*initialize the router and start it listening for browser location changes*/
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
