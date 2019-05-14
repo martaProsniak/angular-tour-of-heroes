@@ -1,0 +1,11 @@
+nav a{
+  display: inline-block;
+  margin-right: 1.5em;
+}
+
+/*
+Jednostki em i ex zależą od rozmiaru czcionki i mogą być inne dla każdego elementu w dokumencie. Wielkość em to po prostu rozmiar czcionki.
+Dla elementu, którego czcionka wynosi 2 cale, 1 em oznacza 2 cale. Wyrażanie rozmiarów, takich jak marginesy i odstępy w jednostce em oznacza, że zależą one od rozmiaru czcionki.
+Jeśli użytkownik korzysta z dużej czcionki (np. na dużym monitorze) albo małej czcionki (np. na urządzeniu mobilnym), to podane wielkości będą proporcjonalne.
+Deklaracje takie jak text-indent: 1.5em czy margin: 1em są niezwykle popularne w CSS-ach.
+ */
