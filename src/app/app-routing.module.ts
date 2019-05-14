@@ -7,22 +7,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes)], //initialize the router and start it listening for browser location changes
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
 
-/*
-Add routes
 
-Routes tell the router which view to display when a user clicks a link or pastes a URL into the browser address bar.
-
-A typical Angular Route has two properties:
-
-    path: a string that matches the URL in the browser address bar.
-    component: the component that the router should create when navigating to this route.
-
-You intend to navigate to the HeroesComponent when the URL is something like localhost:4200/heroes.
-
-Import the HeroesComponent so you can reference it in a Route. Then define an array of routes with a single route to that component.
- */
